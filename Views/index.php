@@ -14,10 +14,11 @@ $carros = $controlaCarro->listar();
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
+    <?php require_once 'includes/menu.php'; ?>
 <div class="conteiner">
     <h2>Catálogo de Carros</h2><br>
 
-    <a class="botao" href="cadastra.html">Cadastrar Novo Carro</a><br><br>
+    <a class="botao" href="cadastra.php">Cadastrar Novo Carro</a><br><br>
 
     <?php if (count($carros) > 0): ?>
         <table>

@@ -81,3 +81,45 @@ input[type="number"] {
     background-color: #218838;
     text-decoration: none;
 }
+
+.menu-principal {
+    background-color: #333; /* Fundo cinza escuro para o menu */
+    padding: 0 20px; /* Espaçamento nas laterais */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.menu-principal ul {
+    list-style: none; /* Remove as "bolinhas" da lista */
+    display: flex; /* Coloca os itens da lista um ao lado do outro */
+}
+
+.menu-principal a {
+    display: block; /* Faz o link ocupar todo o espaço do item da lista */
+    padding: 15px; /* Espaçamento interno para aumentar a área clicável */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse por cima do link */
+.menu-principal a:hover {
+    background-color: #555; /* Fundo cinza um pouco mais claro */
+}
+
+/* Container para alinhar os botões do formulário */
+.acoes-formulario {
+    display: flex; /* Ativa o layout flexbox */
+    justify-content: flex-end; /* Alinha os botões à direita */
+    gap: 10px; /* Cria um espaço de 10px entre os botões */
+    margin-top: 20px; /* Adiciona um espaço acima dos botões */
+}
+
+/* Une as duas classes para criar uma regra mais forte */
+.botao.botao-cancelar {
+    background-color: #6c757d; 
+}
+
+/* E também ajustamos o hover dele */
+.botao.botao-cancelar:hover {
+    background-color: #5a6268; 
+}
