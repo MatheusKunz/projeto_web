@@ -15,7 +15,7 @@ $motos = $controlaMoto->listar();
 <body>
     <?php require_once 'includes/menu.php'; ?>
     <div class="conteiner">
-        <h2>Catálogo de Motos</h2>
+        <h2>Catálogo de Motos</h2><br>
         <a class="botao" href="cadastraMoto.php">Cadastrar Nova Moto</a>
         <table>
             <thead>
