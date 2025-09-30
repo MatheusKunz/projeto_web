@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Carro</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
 </head>
 
 <body>
