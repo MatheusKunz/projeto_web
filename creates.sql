@@ -7,3 +7,12 @@ CREATE TABLE IF NOT EXISTS carros (
     placa VARCHAR(10) UNIQUE NOT NULL, 
     preco DECIMAL(10, 2) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS motos (
+    id SERIAL PRIMARY KEY,
+    marca VARCHAR(50) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    ano INT NOT NULL,
+    cilindradas INT NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL
+);
