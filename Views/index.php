@@ -20,22 +20,25 @@ $carros = $controlaCarro->listar();
     <div class="conteiner">
         <h2>Catálogo de Carros</h2><br>
 
-        <a class="botao" href="cadastra.php">Cadastrar Novo Carro</a><br>
+        <a class="botao" href="cadastra.php">Cadastrar Novo Carro</a>
 
-        <?php if (count($carros) > 0): ?>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Marca</th>
-                        <th>Modelo</th>
-                        <th>Ano</th>
-                        <th>Placa</th>
-                        <th>Preço</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($carros as $carro): ?>
+        <table>
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Ano</th>
+                    <th>Placa</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // A lógica PHP agora fica aqui dentro
+                if (count($carros) > 0):
+                    foreach ($carros as $carro):
+                ?>
                         <tr>
                             <td><?= htmlspecialchars($carro->getMarca()) ?></td>
                             <td><?= htmlspecialchars($carro->getModelo()) ?></td>
@@ -45,16 +48,23 @@ $carros = $controlaCarro->listar();
                             <td>
                                 <a class="button" href="editaCarro.php?id=<?= $carro->getId() ?>">Editar</a>
                                 <a class="button delete" href="../Services/exclui.php?id=<?= $carro->getId() ?>"
-                                    onclick="return confirm('Tem certeza?');">Excluir</a>
+                                   onclick="return confirm('Tem certeza?');">Excluir</a>
                             </td>
                         </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        <?php else: ?>
-            <p>Nenhum carro cadastrado.</p>
-        <?php endif; ?>
+                <?php
+                    endforeach;
+                else:
+                    // Se não houver carros, exibe a mensagem dentro do corpo da tabela
+                ?>
+                    <tr>
+                        <td colspan="6">Nenhum carro cadastrado.</td>
+                    </tr>
+                <?php
+                endif;
+                ?>
+            </tbody>
+        </table>
+
     </div>
 </body>
-
 </html>
