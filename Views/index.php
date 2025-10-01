@@ -35,7 +35,6 @@ $carros = $controlaCarro->listar();
             </thead>
             <tbody>
                 <?php
-                // A lógica PHP agora fica aqui dentro
                 if (count($carros) > 0):
                     foreach ($carros as $carro):
                 ?>
